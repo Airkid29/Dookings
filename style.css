@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-right: 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+.text-center bg-gray-200 py-16{
+    height: 800px;
+}
