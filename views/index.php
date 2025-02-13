@@ -7,29 +7,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="../public/js/script.js"></script>
-    
 
-    <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-gray-100">
 
-    <!-- Navbar -->
-    <nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Dookings</h1>
-        <ul class="flex space-x-4">
+    <!-- Navbar mobile responsive -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Dookings</h1>
+            <button class="md:hidden text-white" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul class="hidden md:flex space-x-4 mt-2" id="menu">
             <li><a href="index.php" class="hover:underline">Accueil</a></li>
             <li><a href="search.php" class="hover:underline">Rechercher</a></li>
             <li><a href="profil.php" class="hover:underline">Profil</a></li>
         </ul>
     </nav>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="relative bg-cover bg-center h-96 flex items-center justify-center text-white"
